@@ -1,0 +1,251 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+    <title>Reteserve: Reserve</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,800" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Oleo+Script:400" rel="stylesheet" type="text/css" />
+    <script src="js/jquery-1.11.0.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/skel.min.js"></script>
+    <script src="js/skel-panels.min.js"></script>
+
+    <link rel="stylesheet" href="js/jqwidgets/styles/jqx.base.css" type="text/css" />
+    <link rel="stylesheet" href="css/reserve.css" />
+
+
+    <script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+    <script type="text/javascript" src="js/jqwidgets/jqxcore.js"></script>
+    <script type="text/javascript" src="js/jqwidgets/jqxdata.js"></script>
+    <script type="text/javascript" src="js/jqwidgets/jqxinput.js"></script>
+    <script type="text/javascript" src="js/jqwidgets/jqxbuttons.js"></script>
+    <script type="text/javascript" src="js/jqwidgets/jqxscrollbar.js"></script>
+    <script type="text/javascript" src="js/jqwidgets/jqxmenu.js"></script>
+    <script type="text/javascript" src="js/jqwidgets/jqxdatatable.js"></script>
+    <script type="text/javascript" src="js/jqwidgets/jqxtabs.js"></script>
+    <script type="text/javascript" src="js/jqwidgets/jqxwindow.js"></script>
+    <script type="text/javascript" src="js/jqwidgets/jqxgrid.js"></script>
+    <script type="text/javascript" src="js/jqwidgets/jqxgrid.edit.js"></script>
+    <script type="text/javascript" src="js/jqwidgets/jqxgrid.grouping.js"></script>
+    <script type="text/javascript" src="js/jqwidgets/jqxgrid.selection.js"></script
+
+
+
+    <!-- serene client -->
+    <script src="/serene/client.js"></script>
+
+    <script src="js/tables.js"></script>
+
+    <script language="JavaScript" type="text/javascript">
+        var serenaServer = new serena.SerenaClient('http://localhost', {name: "admin", group: "public"});
+        $(document).ready(function(){
+            tables.initTables(serenaServer);
+        });
+    </script>
+
+    <noscript>
+        <link rel="stylesheet" href="css/skel-noscript.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/style-desktop.css" />
+    </noscript>
+    <!--[if lte IE 8]><script src="js/html5shiv.js"></script><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
+    <!--[if lte IE 7]><link rel="stylesheet" href="css/ie7.css" /><![endif]-->
+
+</head>
+<body class="homepage">
+
+<!-- Header Wrapper -->
+<div id="header-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="12u">
+
+                <!-- Header -->
+                <header id="header">
+
+                    <!-- Logo -->
+                    <div id="logo">
+                        <h1><a href="#" id="logo">ReteServe</a></h1>
+                        <span>Get notified when a table becomes free</span>
+                    </div>
+
+                    <!-- Nav -->
+                    <nav id="nav">
+                        <ul>
+                            <li class="current_page_item"><a href="/home">Home</a></li>
+                            <li><a href="/reserve">Reserve</a></li>
+                        </ul>
+                    </nav>
+
+                </header>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Banner Wrapper -->
+<div id="banner-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="12u">
+
+                <!-- Banner -->
+                <div id="banner" class="box">
+
+                    <div>
+                        <div class="row">
+                            <div class="7u">
+                                <h2>Reteserve</h2>
+                                <p>Reserve a table in our restaurant, and get notified when it's ready</p>
+                            </div>
+                            <div class="5u">
+                                <ul>
+                                    <li><a href="notifications" class="button big fa fa-arrow-circle-right">Notifications</a></li>
+                                    <li><a href="reserve" class="button alt big fa fa-question-circle">Check status</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Main Wrapper -->
+<div id="main-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="4u">
+
+                <!-- Sidebar -->
+                <div id="sidebar">
+                    <section class="widget-thumbnails">
+                        <div class="grid">
+                            <div class="row no-collapse half">
+                                <div class="6u"><a href="http://html5up.net/minimaxing/" class="image image-full"><img src="images/pic04.jpg" alt="" /></a></div>
+                                <div class="6u"><a href="http://html5up.net/halcyonic/" class="image image-full"><img src="images/pic05.jpg" alt="" /></a></div>
+                            </div>
+                            <div class="row no-collapse half">
+                                <div class="6u"><a href="http://html5up.net/arcana/" class="image image-full"><img src="images/pic06.jpg" alt="" /></a></div>
+                                <div class="6u"><a href="http://html5up.net/zerofour/" class="image image-full"><img src="images/pic07.jpg" alt="" /></a></div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+            </div>
+            <div class="8u">
+
+                <!-- Content -->
+                <div id="content">
+                    <section class="last">
+                        <h2>Status of tables</h2>
+
+                        <div>
+                            <span id="freetablesno">0 tables free</span> |
+                            <a href="#" id="saveTableFacts" >Save</a>
+                        </div>
+
+                        <div id="dataTable"></div>
+
+                        <br />
+
+                        <a href="#" class="button fa fa-arrow-circle-right" id="requestRes">Request table notification</a>
+                    </section>
+                </div>
+                <!-- the dialog -->
+                <div style="visibility: hidden;" id="dialog">
+                    <div>Edit Dialog</div>
+                    <div style='overflow: hidden'>
+                        <table style='table-layout: fixed; border-style: none;'>
+                            <tr>
+                                <td></td>
+                                <td align="center">
+
+                                    <img id="tableImg" src="/images/table.jpg" style="width: 60px; height: 60px; margin-top: 2px;" />
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td align="right">Client name:</td>
+                                <td align="left">
+                                    <input id="reservationName" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right">Date/Time:</td>
+                                <td align="left">
+                                    <input id="reservationTime" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right">Capacity:</td>
+                                <td align="left">
+                                    <input id="reservationCapacity" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right">Location:</td>
+                                <td align="left">
+                                    <input id="reservationLocation" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" align="right">
+                                    <button id="saveres">Save</button> <button style="margin-left: 1px;" id="cancelres">Cancel</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="visibility: hidden;" id="dialogGrid">
+            <div>Edit Dialog</div>
+            <div style='overflow: hidden'>
+                <table style='table-layout: fixed; border-style: none;'>
+                    <tr>
+                        <td colspan="2">
+                            <div id = "ruleGrid"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="right">
+                            <button id="dgsaveres">Save</button> <button style="margin-left: 1px;" id="dgcancelres">Cancel</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Footer Wrapper -->
+<div id="footer-wrapper">
+    <footer id="footer" class="container">
+        <div class="row">
+            <div class="12u">
+                <div id="copyright">
+                    &copy; Reteserve. All rights reserved. | Images: <a href="http://fotogrph.com/">fotogrph</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+</body>
+</html>
+<!--
+Verti 2.5 by HTML5 UP
+html5up.net | @n33co
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->

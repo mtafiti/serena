@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<!-- saved from url=(0029)http://localhost:3000/reserve -->
+<html class=" desktop"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Reteserve</title>
+    
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="./Reteserve_files/css" rel="stylesheet" type="text/css">
+    <link href="./Reteserve_files/css(1)" rel="stylesheet" type="text/css">
+    <script src="./Reteserve_files/jquery-1.11.0.js"></script><style type="text/css"></style>
+    <script src="./Reteserve_files/config.js"></script>
+    <style type="text/css">html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}body{-webkit-text-size-adjust:none}</style><style type="text/css">@-ms-viewport{width: device-width}</style><style type="text/css">body{min-width:1200px}.container{margin-left:auto;margin-right:auto;width:1200px}.container.small{width:900px}.container.big{width:100%;max-width:1500px;min-width:1200px}</style><style type="text/css">.\31 2u{width:100%}.\31 1u{width:91.6666666667%}.\31 0u{width:83.3333333333%}.\39 u{width:75%}.\38 u{width:66.6666666667%}.\37 u{width:58.3333333333%}.\36 u{width:50%}.\35 u{width:41.6666666667%}.\34 u{width:33.3333333333%}.\33 u{width:25%}.\32 u{width:16.6666666667%}.\31 u{width:8.3333333333%}.\-11u{margin-left:91.6666666667%}.\-10u{margin-left:83.3333333333%}.\-9u{margin-left:75%}.\-8u{margin-left:66.6666666667%}.\-7u{margin-left:58.3333333333%}.\-6u{margin-left:50%}.\-5u{margin-left:41.6666666667%}.\-4u{margin-left:33.3333333333%}.\-3u{margin-left:25%}.\-2u{margin-left:16.6666666667%}.\-1u{margin-left:8.3333333333%}</style><style type="text/css">.row>*{float:left;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box}.row:after{content:'';display:block;clear:both;height:0}.row:first-child>*{padding-top:0!important}</style><style type="text/css">.row.flush{margin-left:0}.row.flush>*{padding:0!important}.row>*{padding-left:40px}.row+.row>*{padding:40px 0 0 40px}.row{margin-left:-40px}.row.half>*{padding-left:20px}.row+.row.half>*{padding:20px 0 0 20px}.row.half{margin-left:-20px}.row.quarter>*{padding-left:10px}.row+.row.quarter>*{padding:10px 0 0 10px}.row.quarter{margin-left:-10px}.row.oneandhalf>*{padding-left:60px}.row+.row.oneandhalf>*{padding:60px 0 0 60px}.row.oneandhalf{margin-left:-60px}.row.double>*{padding-left:80px}.row+.row.double>*{padding:80px 0 0 80px}.row.double{margin-left:-80px}</style><style type="text/css">.not-desktop{display:none!important}.only-mobile,.only-1000px{display:none!important}</style><link rel="stylesheet" type="text/css" href="./Reteserve_files/style.css"><link rel="stylesheet" type="text/css" href="./Reteserve_files/style-desktop.css"><script src="./Reteserve_files/skel.min.js"></script>
+    <script src="./Reteserve_files/skel-panels.min.js"></script>
+
+    <link rel="stylesheet" href="./Reteserve_files/jqx.base.css" type="text/css">
+    <link rel="stylesheet" href="http://localhost:3000/css/reserve.css">
+
+
+    <script type="text/javascript" src="./Reteserve_files/jquery-1.11.0.js"></script>
+    <script type="text/javascript" src="./Reteserve_files/jqxcore.js"></script>
+    <script type="text/javascript" src="./Reteserve_files/jqxdata.js"></script>
+    <script type="text/javascript" src="./Reteserve_files/jqxbuttons.js"></script>
+    <script type="text/javascript" src="./Reteserve_files/jqxscrollbar.js"></script>
+    <script type="text/javascript" src="./Reteserve_files/jqxmenu.js"></script>
+    <script type="text/javascript" src="./Reteserve_files/jqxdatatable.js"></script>
+    <script type="text/javascript" src="./Reteserve_files/jqxtabs.js"></script>
+
+    <!-- socket.io -->
+    <script src="./Reteserve_files/socket.io.js"></script>
+
+    <script src="./Reteserve_files/tables.js"></script>
+
+    <script language="JavaScript" type="text/javascript">
+        var socket = io.connect('http://localhost');
+        $(document).ready(function(){
+            tables.initTables();
+        });
+    </script>
+
+    <noscript>
+        &lt;link rel="stylesheet" href="css/skel-noscript.css" /&gt;
+        &lt;link rel="stylesheet" href="css/style.css" /&gt;
+        &lt;link rel="stylesheet" href="css/style-desktop.css" /&gt;
+    </noscript>
+    <!--[if lte IE 8]><script src="js/html5shiv.js"></script><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
+    <!--[if lte IE 7]><link rel="stylesheet" href="css/ie7.css" /><![endif]-->
+
+</head>
+<body class="homepage"><div id="skel-panels-pageWrapper" style="position: relative; left: 0px; right: 0px; top: 0px;">
+
+<!-- Header Wrapper -->
+<div id="header-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="12u">
+
+                <!-- Header -->
+                <header id="header">
+
+                    <!-- Logo -->
+                    <div id="logo">
+                        <h1><a href="http://localhost:3000/reserve#" id="logo">Verti</a></h1>
+                        <span>A responsive site template by HTML5 UP</span>
+                    </div>
+
+                    <!-- Nav -->
+                    <nav id="nav">
+                        <ul>
+                            <li class="current_page_item"><a href="http://localhost:3000/home">Home</a></li>
+                            <li><a href="./Reteserve_files/Reteserve.html">Reserve</a></li>
+                        </ul>
+                    </nav>
+
+                </header>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Banner Wrapper -->
+<div id="banner-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="12u">
+
+                <!-- Banner -->
+                <div id="banner" class="box">
+
+                    <div>
+                        <div class="row">
+                            <div class="7u">
+                                <h2>Reteserve</h2>
+                                <p>Reserve a table in our restaurant, and get notified when it's ready</p>
+                            </div>
+                            <div class="5u">
+                                <ul>
+                                    <li><a href="http://localhost:3000/reserve#" class="button big fa fa-arrow-circle-right">Reserve</a></li>
+                                    <li><a href="http://localhost:3000/reserve#" class="button alt big fa fa-question-circle">Check status</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Main Wrapper -->
+<div id="main-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="4u">
+
+                <!-- Sidebar -->
+                <div id="sidebar">
+                    <section class="widget-thumbnails">
+                        <div class="grid">
+                            <div class="row no-collapse half">
+                                <div class="6u"><a href="http://html5up.net/minimaxing/" class="image image-full"><img src="./Reteserve_files/pic04.jpg" alt=""></a></div>
+                                <div class="6u"><a href="http://html5up.net/halcyonic/" class="image image-full"><img src="./Reteserve_files/pic05.jpg" alt=""></a></div>
+                            </div>
+                            <div class="row no-collapse half">
+                                <div class="6u"><a href="http://html5up.net/arcana/" class="image image-full"><img src="./Reteserve_files/pic06.jpg" alt=""></a></div>
+                                <div class="6u"><a href="http://html5up.net/zerofour/" class="image image-full"><img src="./Reteserve_files/pic07.jpg" alt=""></a></div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+            </div>
+            <div class="8u">
+
+                <!-- Content -->
+                <div id="content">
+                    <section class="last">
+                        <h2>Status of tables</h2>
+
+                        <div>
+                            <p>0 tables free</p>
+                        </div>
+
+                        <div id="dataTable" tabindex="0" role="grid" align="left" class="jqx-grid jqx-reset jqx-rc-all jqx-widget jqx-widget-content" style="width: 640px; height: 534px;"><div style="z-index: 99998; background-color: rgba(50, 50, 50, 0.0980392); overflow: hidden; position: absolute; width: 640px; height: 534px; visibility: hidden; display: none;" class="jqx-rc-all"><div style="z-index: 99999; margin-left: -66px; left: 50%; top: 50%; margin-top: -24px; position: relative; width: 100px; height: 33px; padding: 5px; font-family: verdana; font-size: 12px; color: #767676; border-color: #898989; border-width: 1px; border-style: solid; background: #f6f6f6; border-collapse: collapse;" class="jqx-rc-all jqx-fill-state-normal"><div style="float: left;"><div style="float: left; overflow: hidden; width: 32px; height: 32px;" class="jqx-grid-load"></div><span style="margin-top: 10px; float: left; display: block; margin-left: 5px;">Loading...</span></div></div></div><div style="overflow: hidden; -webkit-appearance: none; outline: none; width:100%; height: 100%; align:left; border: 0px; padding: 0px; margin: 0px; left: 0px; top: 0px; valign:top; position: relative;"><div id="wrapperdataTable" style="overflow: hidden; -webkit-appearance: none; border: none; background: transparent; outline: none; width:100%; height: 100%; padding: 0px; margin: 0px; align:left; left: 0px; top: 0px; valign:top; position: relative;"><div id="toolbardataTable" style="visibility: hidden; left: 0px; top: 0px; position: absolute; height: 0px;" class="jqx-grid-toolbar jqx-widget-header"></div><div id="toppager" style="left: 0px; top: 0px; position: absolute; visibility: hidden; width: 640px; height: 28px;" class="jqx-grid-pager-top jqx-widget-header"><div style="width: 100%; height: 100%; position: relative; top: 5.5px; min-width: 257px;"><div type="button" style="margin-left: 3px; padding: 0px; margin-top: 0px; margin-right: 3px; width: 27px; cursor: pointer; float: left;" title="first" id="jqxWidget52d2dd74" role="button" class="jqx-rc-all jqx-button jqx-widget jqx-fill-state-normal" aria-disabled="false"><div style="margin-left: 6px; width: 15px; height: 15px;" class="jqx-icon-arrow-first"></div></div><div type="button" style="padding: 0px; margin-top: 0px; margin-right: 3px; width: 27px; float: left; cursor: pointer;" title="previous" id="jqxWidget04f1fc47" role="button" class="jqx-rc-all jqx-button jqx-widget jqx-fill-state-normal" aria-disabled="false"><div style="margin-left: 6px; width: 15px; height: 15px;" class="jqx-icon-arrow-left"></div></div><div style="padding-bottom: 3px; margin-right: 3px; float: left;"><a class="jqx-grid-pager-number jqx-rc-all jqx-fill-state-pressed" tabindex="-1" href="javascript:;" data-page="1">1</a><a class="jqx-grid-pager-number jqx-rc-all" tabindex="-1" href="javascript:;" data-page="2">2</a></div><div type="button" style="padding: 0px; margin-top: 0px; margin-right: 3px; width: 27px; float: left; cursor: pointer;" title="next" id="jqxWidget2c0bfaea" role="button" class="jqx-rc-all jqx-button jqx-widget jqx-fill-state-normal" aria-disabled="false"><div style="margin-left: 6px; width: 15px; height: 15px;" class="jqx-icon-arrow-right"></div></div><div type="button" style="padding: 0px; margin-top: 0px; margin-right: 3px; width: 27px; cursor: pointer; float: left;" title="last" id="jqxWidget64e1ddf2" role="button" class="jqx-rc-all jqx-button jqx-widget jqx-fill-state-normal" aria-disabled="false"><div style="margin-left: 6px; width: 15px; height: 15px;" class="jqx-icon-arrow-last"></div></div><div style="float: right; margin-left: 0px; margin-right: 7px;">1-4 of 7</div></div></div><div id="filterdataTable" style="visibility: hidden; left: 0px; top: 0px; position: absolute;" class="jqx-widget-header jqx-grid-toolbar"></div><div id="contentdataTable" style="overflow: hidden; -webkit-appearance: none; background-color: transparent; outline: none; border: none; padding: 0px; margin: 0px; left: 0px; top: 0px; position: absolute; width: 640px; height: 507px; background-position: initial initial; background-repeat: initial initial;" class="jqx-reset"><div style="overflow: hidden; display: block; height: 30px; width: 642px;" class="jqx-widget-header jqx-grid-header"><div id="columntabledataTable" style="height: 100%; position: relative; width: 640px; margin-left: 0px;"><div role="columnheader" style="z-index: 59; position: absolute; height: 100%; width: 640px; left: 0px;" class="jqx-grid-column-header jqx-widget-header jqx-disableselect"><div style="height: 100%; width: 100%;"><div style="overflow: hidden; text-overflow: ellipsis; text-align: left; margin-left: 4px; margin-right: 4px; margin-bottom: 7px; margin-top: 7px;"><span style="text-overflow: ellipsis; cursor: default;">Tables</span></div><div class="iconscontainer" style="height: 30px; margin-left: -32px; display: block; position: absolute; left: 100%; top: 0%; width: 32px;"><div class="filtericon jqx-widget-header" style="height: 30px; float: right; display: none; width: 16px;"><div class="jqx-grid-column-filterbutton" style="width: 100%; height:100%;"></div></div><div class="sortasc jqx-widget-header" style="height: 30px; float: right; display: none; width: 16px;"><div class="jqx-grid-column-sortascbutton" style="width: 100%; height:100%;"></div></div><div class="sortdesc jqx-widget-header" style="height: 30px; float: right; display: none; width: 16px;"><div class="jqx-grid-column-sortdescbutton" style="width: 100%; height:100%;"></div></div></div></div></div></div></div><div style="width: 100%; overflow: hidden; position: absolute;" class="jqx-grid-content jqx-widget-content"><div id="contenttabledataTable" style="overflow: hidden; position: relative; width: 642px; left: 0px;"><table cellspacing="0" cellpadding="0" class="jqx-grid-table" id="tabledataTable"><colgroup><col style="max-width: 640px; width: 640px;"></colgroup><tbody><tr data-key="0" role="row" id="row0dataTable"><td role="gridcell" style="max-width:640px; width:640px;border-right-color: transparent;border-left-width: 0px;" class="jqx-cell jqx-grid-cell jqx-item"><div style="width: 100%; height: 100%;"><div style="float: left; width: 20%;"><div style="margin: 5px; margin-bottom: 3px;"><img width="60" height="60" style="display: block;" src="./Reteserve_files/table.jpg"></div></div><div style="float: left; width: 40%;"><div style="margin: 10px;"><b>Table:</b> Table 1</div><div style="margin: 10px;"><b>No of people:</b> 2</div><div style="margin: 10px;"><b>Location:</b> Window</div></div><div style="float: left; width: 40%;"><div style="margin: 10px;"><img id="table1" width="60" height="60" style="display: block;" src="./Reteserve_files/box_green.png"></div><div style="margin: 10px;"><b>Status:</b> Free</div></div></div></td></tr><tr data-key="1" role="row" id="row1dataTable"><td role="gridcell" style="max-width:640px; width:640px;border-right-color: transparent;border-left-width: 0px;" class="jqx-cell jqx-grid-cell jqx-item"><div style="width: 100%; height: 100%;"><div style="float: left; width: 20%;"><div style="margin: 5px; margin-bottom: 3px;"><img width="60" height="60" style="display: block;" src="./Reteserve_files/table.jpg"></div></div><div style="float: left; width: 40%;"><div style="margin: 10px;"><b>Table:</b> Table 2</div><div style="margin: 10px;"><b>No of people:</b> 2</div><div style="margin: 10px;"><b>Location:</b> Door</div></div><div style="float: left; width: 40%;"><div style="margin: 10px;"><img id="table2" width="60" height="60" style="display: block;" src="./Reteserve_files/box_green.png"></div><div style="margin: 10px;"><b>Status:</b> Free</div></div></div></td></tr><tr data-key="2" role="row" id="row2dataTable"><td role="gridcell" style="max-width:640px; width:640px;border-right-color: transparent;border-left-width: 0px;" class="jqx-cell jqx-grid-cell jqx-item"><div style="width: 100%; height: 100%;"><div style="float: left; width: 20%;"><div style="margin: 5px; margin-bottom: 3px;"><img width="60" height="60" style="display: block;" src="./Reteserve_files/table.jpg"></div></div><div style="float: left; width: 40%;"><div style="margin: 10px;"><b>Table:</b> Table 3</div><div style="margin: 10px;"><b>No of people:</b> 2</div><div style="margin: 10px;"><b>Location:</b> Middle</div></div><div style="float: left; width: 40%;"><div style="margin: 10px;"><img id="table3" width="60" height="60" style="display: block;" src="./Reteserve_files/box_green.png"></div><div style="margin: 10px;"><b>Status:</b> Free</div></div></div></td></tr><tr data-key="3" role="row" id="row3dataTable"><td role="gridcell" style="max-width:640px; width:640px;border-right-color: transparent;border-left-width: 0px;" class="jqx-cell jqx-grid-cell jqx-item"><div style="width: 100%; height: 100%;"><div style="float: left; width: 20%;"><div style="margin: 5px; margin-bottom: 3px;"><img width="60" height="60" style="display: block;" src="./Reteserve_files/table.jpg"></div></div><div style="float: left; width: 40%;"><div style="margin: 10px;"><b>Table:</b> Table 4</div><div style="margin: 10px;"><b>No of people:</b> 2</div><div style="margin: 10px;"><b>Location:</b> Window</div></div><div style="float: left; width: 40%;"><div style="margin: 10px;"><img id="table4" width="60" height="60" style="display: block;" src="./Reteserve_files/box_green.png"></div><div style="margin: 10px;"><b>Status:</b> Free</div></div></div></td></tr></tbody></table></div></div></div><div id="verticalScrollBardataTable" style="left: 621px; top: 0px; position: absolute; visibility: hidden; width: 15px; height: 504px; z-index: 139;" class="jqx-scrollbar jqx-widget jqx-widget-content jqx-rc-all"><div id="jqxScrollOuterWrapverticalScrollBardataTable" style="width:100%; height: 100%; align:left; border: 0px; valign:top; position: relative;" class="jqx-reset"><div id="jqxScrollWrapverticalScrollBardataTable" style="width: 17px; height: 100%; left: 0px; top: 0px; position: absolute;" class="jqx-reset jqx-scrollbar-state-normal"><div id="jqxScrollBtnUpverticalScrollBardataTable" style="left: 0px; top: 0px; position: absolute; width: 15px; height: 15px;" class="jqx-scrollbar-button-state-normal jqx-rc-t"><div class="jqx-reset jqx-icon-arrow-up"></div></div><div id="jqxScrollAreaUpverticalScrollBardataTable" style="left: 0px; top: 17px; position: absolute; height: 0px; width: 15px;" class="jqx-reset"></div><div id="jqxScrollThumbverticalScrollBardataTable" style="left: 0px; top: 17px; position: absolute; width: 15px; height: 152px; visibility: inherit;" class="jqx-scrollbar-thumb-state-normal jqx-fill-state-normal jqx-rc-all"></div><div id="jqxScrollAreaDownverticalScrollBardataTable" style="left: 0px; top: 169px; position: absolute; height: 316px; width: 15px;" class="jqx-reset"></div><div id="jqxScrollBtnDownverticalScrollBardataTable" style="left: 0px; top: 487px; position: absolute; width: 15px; height: 15px;" class="jqx-scrollbar-button-state-normal jqx-rc-b"><div class="jqx-reset jqx-icon-arrow-down"></div></div></div></div></div><div id="horizontalScrollBardataTable" style="left: 0px; top: 486px; position: absolute; visibility: hidden; height: 15px; width: 638px; z-index: 139;" class="jqx-scrollbar jqx-widget jqx-widget-content jqx-rc-all"><div id="jqxScrollOuterWraphorizontalScrollBardataTable" style="width:100%; height: 100%; align:left; border: 0px; valign:top; position: relative;" class="jqx-reset"><div id="jqxScrollWraphorizontalScrollBardataTable" style="width: 100%; height: 17px; left: 0px; top: 0px; position: absolute;" class="jqx-reset jqx-scrollbar-state-normal"><div id="jqxScrollBtnUphorizontalScrollBardataTable" style="left: 0px; top: 0px; position: absolute; width: 15px; height: 15px;" class="jqx-scrollbar-button-state-normal jqx-rc-l"><div class="jqx-reset jqx-icon-arrow-left"></div></div><div id="jqxScrollAreaUphorizontalScrollBardataTable" style="left: 17px; top: 0px; position: absolute; height: 15px;" class="jqx-reset"></div><div id="jqxScrollThumbhorizontalScrollBardataTable" style="left: 17px; top: 0px; position: absolute; width: 230px; height: 15px; visibility: inherit;" class="jqx-scrollbar-thumb-state-normal-horizontal jqx-fill-state-normal jqx-rc-all"></div><div id="jqxScrollAreaDownhorizontalScrollBardataTable" style="left: 249px; top: 0px; position: absolute; width: 372px; height: 15px;" class="jqx-reset"></div><div id="jqxScrollBtnDownhorizontalScrollBardataTable" style="left: 621px; top: 0px; position: absolute; width: 15px; height: 15px;" class="jqx-scrollbar-button-state-normal jqx-rc-r"><div class="jqx-reset jqx-icon-arrow-right"></div></div></div></div></div><div id="bottomRight" style="left: 0px; top: 0px; border: none; position: absolute; visibility: hidden;" class="jqx-grid-bottomright jqx-scrollbar-state-normal"></div><div id="aggregatesdataTable" style="left: 0px; top: 0px; position: absolute; height: 0px;" class="jqx-grid-statusbar jqx-widget-header"></div><div id="statusbardataTable" style="left: 0px; top: 0px; position: absolute; height: 0px;" class="jqx-grid-statusbar jqx-widget-header"></div><div id="pagerdataTable" style="z-index: 20; left: 0px; top: 505px; position: absolute; visibility: inherit; width: 640px; height: 28px;" class="jqx-grid-pager jqx-widget-header"><div style="width: 100%; height: 100%; position: relative; top: 5.5px; min-width: 257px;"><div type="button" style="margin-left: 3px; padding: 0px; margin-top: 0px; margin-right: 3px; width: 27px; cursor: pointer; float: left;" title="first" id="jqxWidget1d4ae411" role="button" class="jqx-rc-all jqx-button jqx-widget jqx-fill-state-normal" aria-disabled="false"><div style="margin-left: 6px; width: 15px; height: 15px;" class="jqx-icon-arrow-first"></div></div><div type="button" style="padding: 0px; margin-top: 0px; margin-right: 3px; width: 27px; float: left; cursor: pointer;" title="previous" id="jqxWidgete8acdd42" role="button" class="jqx-rc-all jqx-button jqx-widget jqx-fill-state-normal" aria-disabled="false"><div style="margin-left: 6px; width: 15px; height: 15px;" class="jqx-icon-arrow-left"></div></div><div style="padding-bottom: 3px; margin-right: 3px; float: left;"><a class="jqx-grid-pager-number jqx-rc-all jqx-fill-state-pressed" tabindex="-1" href="javascript:;" data-page="1">1</a><a class="jqx-grid-pager-number jqx-rc-all" tabindex="-1" href="javascript:;" data-page="2">2</a></div><div type="button" style="padding: 0px; margin-top: 0px; margin-right: 3px; width: 27px; float: left; cursor: pointer;" title="next" id="jqxWidget299b0052" role="button" class="jqx-rc-all jqx-button jqx-widget jqx-fill-state-normal" aria-disabled="false"><div style="margin-left: 6px; width: 15px; height: 15px;" class="jqx-icon-arrow-right"></div></div><div type="button" style="padding: 0px; margin-top: 0px; margin-right: 3px; width: 27px; cursor: pointer; float: left;" title="last" id="jqxWidget5756f791" role="button" class="jqx-rc-all jqx-button jqx-widget jqx-fill-state-normal" aria-disabled="false"><div style="margin-left: 6px; width: 15px; height: 15px;" class="jqx-icon-arrow-last"></div></div><div style="float: right; margin-left: 0px; margin-right: 7px;">1-4 of 7</div></div></div></div></div></div>
+
+                        <br>
+
+                        <a href="http://html5up.net/" class="button fa fa-arrow-circle-right">Check client list</a>
+                    </section>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer Wrapper -->
+<div id="footer-wrapper">
+    <footer id="footer" class="container">
+        <div class="row">
+            <div class="12u">
+                <div id="copyright">
+                    © Reteserve. All rights reserved. | Images: <a href="http://fotogrph.com/">fotogrph</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+
+
+<!--
+Verti 2.5 by HTML5 UP
+html5up.net | @n33co
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+--></div></body></html>

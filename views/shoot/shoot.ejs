@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+    <title>Shoot: Home</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,800" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Oleo+Script:400" rel="stylesheet" type="text/css" />
+    <script src="js/jquery-1.11.0.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/skel.min.js"></script>
+    <script src="js/skel-panels.min.js"></script>
+    <noscript>
+        <link rel="stylesheet" href="css/skel-noscript.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/style-desktop.css" />
+    </noscript>
+    <!--[if lte IE 8]><script src="js/html5shiv.js"></script><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
+    <!--[if lte IE 7]><link rel="stylesheet" href="css/ie7.css" /><![endif]-->
+
+    <!-- serene client include -->
+    <script src="/serene/client.js"></script>
+    <!-- custom script file -->
+    <script src="js/shoot/shoot.js" ></script>
+    <!-- init -->
+    <script type="text/javascript" language="JavaScript">
+        var server;
+        $(document).ready(function(){
+            //arguments: host, login, group, connectCallback
+            server = new serene.SereneClient('http://localhost', {name: shoot.getParam("login"),
+                    group: shoot.getParam("group")}, shoot.onConnect);
+
+            shoot.init(server, shoot.getParam("login"),  shoot.getParam("group"));
+
+        });
+    </script>
+
+</head>
+<body class="homepage">
+
+<!-- Header Wrapper -->
+<div id="header-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="12u">
+
+                <!-- Header -->
+                <header id="header">
+
+                    <!-- Logo -->
+                    <div id="logo">
+                        <h1><a href="#" id="logo">Shoot</a></h1>
+                        <span>Serena's Hot or noT</span>
+                        <span><img src ="images/cupid80X640.png" style="width: 32px; height: 32px; vertical-align: middle;" /></span>
+                    </div>
+
+                    <!-- Nav -->
+                    <nav id="nav">
+                        <ul>
+                            <li class="current_page_item"><a href="home">Home</a></li>
+                            <li><a href="reserve">Register</a></li>
+                        </ul>
+                    </nav>
+
+                </header>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Banner Wrapper -->
+<div id="banner-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="12u">
+
+                <!-- Banner -->
+                <div id="banner" class="box">
+
+                    <div>
+
+                            <div class="12u">
+                                <section class="widget-thumbnails">
+                                    <div class="grid">
+                                        <div class="row no-collapse">
+                                            <div class="12u"><a href="#" class="image image-full"><img src="images/pic04.jpg" alt="" /></a></div>
+                                        </div>
+
+                                    </div>
+                                </section>
+                            </div>
+                        <div class="row">
+                            <div class="12u">
+                                <div class="grid">
+                                    <div class="row no-collapse">
+                                    <div class="6u"><a href="notifications" class="button big fa fa-smile-o">Hot</a></div>
+                                    <div class="6u"><a href="reserve" class="button alt big fa fa-frown-o">Not</a></div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Main Wrapper -->
+<div id="main-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="4u">
+
+                <!-- Sidebar -->
+                <div id="sidebar">
+                    <section class="widget-thumbnails">
+                        <div class="grid">
+                            <div class="row no-collapse">
+                                <div class="10u"><a href="#" class="image image-full"><img src="images/pic04.jpg" alt="" /></a></div>
+                            </div>
+
+                        </div>
+                    </section>
+                </div>
+
+            </div>
+            <div class="8u">
+
+                <!-- Content -->
+                <div id="content">
+                    <section class="last">
+                        <h2>So what's this all about?</h2>
+                        <p>Shoot helps you in your soulmate search to near your area. Simply choose whether you think they are hot or not.. and let Shoot do the rest!</p>
+                        <a href="#" class="button fa fa-arrow-circle-right">Read about the details</a>
+                    </section>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer Wrapper -->
+<div id="footer-wrapper">
+    <footer id="footer" class="container">
+        <div class="row">
+            <div class="12u">
+                <div id="copyright">
+                    &copy; Shoot. All rights reserved. | Images: <a href="http://fotogrph.com/">fotogrph</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+</body>
+</html>
+<!--
+Verti 2.5 by HTML5 UP
+html5up.net | @n33co
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->

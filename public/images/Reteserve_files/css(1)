@@ -1,0 +1,6 @@
+@font-face {
+  font-family: 'Oleo Script';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Oleo Script'), local('OleoScript-Regular'), url(http://themes.googleusercontent.com/static/fonts/oleoscript/v3/_weQNDK6Uf40CiGFKBBUjrrIa-7acMAeDBVuclsi6Gc.woff) format('woff');
+}

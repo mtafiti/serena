@@ -1,0 +1,195 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Reteserve: Test Page</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!-- theme-specific -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,800" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Oleo+Script:400" rel="stylesheet" type="text/css" />
+
+    <!-- jquery and visualization -->
+    <script src="js/jquery-1.11.0.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/skel.min.js"></script>
+    <script src="js/skel-panels.min.js"></script>
+    <script src="js/d3/d3.js" charset="utf-8"></script>
+    <script src="js/d3/dagre-d3.min.js" charset="utf-8"></script>
+
+    <!-- widgets styling -->
+    <link rel="stylesheet" href="js/jqwidgets/styles/jqx.base.css" type="text/css" />
+    <link rel="stylesheet" href="css/graphs.css" type="text/css" />
+
+    <!-- the jQWidgets framework -->
+    <script type="text/javascript" src="js/jqwidgets/jqxcore.js"></script>
+    <!-- widgets -->
+    <script type="text/javascript" src="js/jqwidgets/jqxbuttons.js"></script>
+    <script type="text/javascript" src="js/jqwidgets/jqxdata.js"></script>
+    <script type="text/javascript" src="js/jqwidgets/jqxinput.js"></script>
+    <script type="text/javascript" src="js/jqwidgets/jqxscrollbar.js"></script>
+    <script type="text/javascript" src="js/jqwidgets/jqxmenu.js"></script>
+    <script type="text/javascript" src="js/jqwidgets/jqxcheckbox.js"></script>
+    <script type="text/javascript" src="js/jqwidgets/jqxlistbox.js"></script>
+    <script type="text/javascript" src="js/jqwidgets/jqxdropdownlist.js"></script>
+    <script type="text/javascript" src="js/jqwidgets/jqxgrid.js"></script>
+    <script type="text/javascript" src="js/jqwidgets/jqxgrid.edit.js"></script>
+    <script type="text/javascript" src="js/jqwidgets/jqxgrid.grouping.js"></script>
+    <script type="text/javascript" src="js/jqwidgets/jqxgrid.selection.js"></script>
+    <script type="text/javascript" src="js/jqwidgets/jqxgrid.pager.js"></script>
+    <script type="text/javascript" src="js/jqwidgets/jqxtooltip.js"></script>
+
+    <!-- serene include -->
+    <script src="/serene/client.js"></script>
+    <!-- custom script file -->
+    <script src="js/demo.js" ></script>
+
+    <script src="js/demo/ace-editor/ace.js" type="text/javascript" charset="utf-8"></script>
+
+    <!-- init -->
+    <script type="text/javascript" language="JavaScript">
+        var server;
+        $(document).ready(function(){
+            server = new serena.SerenaClient('http://localhost', {name: demo.param("login"),
+                                           group: demo.param("group")}, demo.onConnect);
+
+            demo.init(server, demo.param("login"),  demo.param("group"));
+            demo.initViz("btnVisualize", "networkView", d3, dagreD3);
+
+        });
+    </script>
+
+    <noscript>
+        <link rel="stylesheet" href="css/skel-noscript.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/style-desktop.css" />
+    </noscript>
+    <!--[if lte IE 8]><script src="js/html5shiv.js"></script><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
+    <!--[if lte IE 7]><link rel="stylesheet" href="css/ie7.css" /><![endif]-->
+
+    <style type="text/css" media="screen">
+
+
+    </style>
+</head>
+<body class="homepage">
+
+<!-- Header Wrapper -->
+<div id="header-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="12u">
+
+                <!-- Header -->
+                <header id="header">
+
+                </header>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Banner Wrapper -->
+<div id="banner-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="12u">
+
+                <!-- Banner -->
+                <div id="banner" class="box">
+
+                    <div>
+                        <div class="row">
+                            <div class="7u">
+                                <p>Demo page</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Main Wrapper -->
+<div id="main-wrapper">
+    <div class="container">
+        <div id="rules" class="row">
+            <h3>Create rules</h3>
+            <div id="login" style=" font-weight: bold; "></div>
+            <div style="display: block; width: 100%;">
+                <div id="ruleEditor" style="width:800px;height:200px;" ></div>
+                <br />
+                <div style='float: left; margin-left: 5px;' id="btnSave">
+                    <img style='position: relative; margin-top: 2px;' src='/images/add.png'/>
+                    <span style='margin-left: 4px; position: relative; top: -3px;'>Add</span>
+                </div>
+
+                <div style='float: left; margin-left: 5px;' id="btnReset">
+                    <img style='position: relative; margin-top: 2px;' src='/images/dragcancel.png'/>
+                    <span style='margin-left: 4px; position: relative; top: -3px;'>Reset</span>
+                </div>
+
+                <br />
+                <hr />
+
+                <div style="display: block; width: 100%;">
+                <h3>Assert Facts</h3>
+                <div id="factEditor" style="width:800px;height:60px;" ></div>
+                <div style='float: left; margin-left: 5px;' id="btnAssert">
+                    <img style='position: relative; margin-top: 2px;' src='/images/add.png'/>
+                    <span style='margin-left: 4px; position: relative; top: -3px;'>Assert</span>
+                </div>
+                ﻿<div style='float: left; margin-left: 5px;' id="btnClear">
+                    <img style='position: relative; margin-top: 2px;' src='/images/dragcancel.png'/>
+                    <span style='margin-left: 4px; position: relative; top: -3px;'>Clear text</span>
+                </div>
+                <br />
+                <br />
+
+                <div id="fired"></div>
+
+            <br />
+                <hr />
+            <div style="display: block;">
+                <h3>Facts on server</h3>
+                <div style='float: left; margin-left: 5px;' id="btnFacts">
+                    <img style='position: relative; margin-top: 2px;' src='/images/see.png'/>
+                    <span style='margin-left: 4px; position: relative; top: -3px;'>Facts</span>
+                </div><br />
+                <div id="factsGrid"></div>
+            </div>
+        </div>
+                <br />
+                <hr />
+
+        <div id="graphs" class="row">
+            <h3>Visualize</h3>
+            <div><input type="button" value="See rete graph" id='btnVisualize' /></div>
+        </div>
+        <div id="graphvisual" >
+            <div id="networkView" >
+                <svg width=600 height=200><g transform="translate(20,20)" /></svg>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer Wrapper -->
+<div id="footer-wrapper">
+    <footer id="footer" class="container">
+
+        <div class="row">
+            <div class="12u">
+                <div id="copyright">
+                    &copy; Reteserve. All rights reserved. | Design: <a href="http://html5up.net/">HTML5 UP</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
