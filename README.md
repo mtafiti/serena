@@ -3,7 +3,7 @@ The Serena restaurant test application.
 
 ## Installation
 
-To run, install from npm the packages: moment, socket.io and underscore. 
+To run, install from npm the packages: moment, express.io and underscore. 
 
 ## Initialization
 
